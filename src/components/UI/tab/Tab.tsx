@@ -15,7 +15,7 @@ const Tab = () => {
         <ul className="flex w-full overflow-x-auto">
           {tabs.map((tab) => (
             <li
-              className={`tab_item bg-white flex justify-center items-center text-sm font-medium text-[#344054] whitespace-nowrap  border-solid border-l-[1px] border-y-[1px] last:border-r-[1px] border-[#d0d5dd]`}
+              className={`tab_item bg-white flex md:last:rounded-r-md md:first:rounded-l-md justify-center items-center text-sm font-medium text-[#344054] whitespace-nowrap  border-solid border-l-[1px] border-y-[1px] last:border-r-[1px] border-[#d0d5dd]`}
               key={tab.name}
             >
               <button className="px-4 py-2 focus:outline-none focus:bg-[#f9fafb]">
