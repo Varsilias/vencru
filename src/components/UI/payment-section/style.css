@@ -1,0 +1,62 @@
+input[name="checkmark"] {
+  appearance: none;
+  position: relative;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[name="checkmark"]::before {
+  content: url("../../../assets/check.svg");
+  position: absolute;
+  font-size: 1.5em;
+  right: 3px;
+  top: -0.5em;
+  visibility: hidden;
+}
+
+input[name="checkmark"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[name="checkmark"]:checked {
+  background-color: #7f56d9;
+}
+
+input[name="account_email"] {
+  appearance: none;
+  position: relative;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #d0d5dd;
+  border-radius: 50%;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[name="account_email"]::before {
+  content: url("../../../assets/radio.svg");
+  position: absolute;
+  font-size: 2rem;
+  right: 4px;
+  top: -0.75em;
+  visibility: hidden;
+}
+
+input[name="account_email"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[name="account_email"]:checked {
+  /* background-color: #7f56d9; */
+  border: 2px solid #7f56d9;
+}

@@ -1,0 +1,271 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  /* border: 3px solid purple; */
+  border: 1px solid #eaecf0;
+}
+
+thead {
+  background-color: #f9fafb;
+}
+
+thead th {
+  font-weight: 500;
+  font-size: 12px;
+  color: #667085;
+  text-align: left;
+}
+
+tbody {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaecf0;
+}
+
+tbody td {
+  text-align: left;
+}
+
+thead th:nth-child(1) {
+  width: 5%;
+  font-size: 16px;
+}
+
+thead th:nth-child(2) {
+  width: 25%;
+}
+
+thead th:nth-child(3) {
+  width: 10%;
+}
+
+thead th:nth-child(4) {
+  width: 20%;
+}
+
+thead th:nth-child(5) {
+  width: 20%;
+}
+
+thead th:nth-child(6) {
+  width: 10%;
+}
+
+thead th:nth-child(7) {
+  width: 10%;
+}
+
+tbody td:nth-child(2) {
+  font-weight: 500;
+  font-size: 14px;
+  color: #101828;
+}
+
+tbody td:nth-child(3) {
+  font-weight: 400;
+  font-size: 14px;
+  color: #667085;
+}
+
+tbody td:nth-child(4) {
+  font-weight: 400;
+  font-size: 14px;
+  color: #667085;
+}
+
+thead tr {
+  border-bottom: 1px solid #eaecf0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eaecf0;
+}
+
+th,
+td {
+  padding: 20px;
+  white-space: nowrap;
+}
+
+input[name="select_row"] {
+  appearance: none;
+  position: relative;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #d0d5dd;
+  border-radius: 5px;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[name="select_row"]::before {
+  content: url("../../../assets/check.svg");
+  position: absolute;
+  font-size: 1.5em;
+  right: 3px;
+  top: -0.5em;
+  visibility: hidden;
+}
+
+input[name="select_row"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[name="select_row"]:checked {
+  background-color: #7f56d9;
+}
+
+@media (min-width: 360px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    /* table-layout: fixed; */
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #eaecf0;
+  }
+
+  thead {
+    background-color: #f9fafb;
+  }
+
+  thead th {
+    font-weight: 500;
+    font-size: 12px;
+    color: #667085;
+    text-align: left;
+  }
+
+  tbody {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaecf0;
+  }
+
+  tbody td {
+    text-align: left;
+  }
+
+  thead th:nth-child(1) {
+    width: 5%;
+    font-size: 16px;
+  }
+
+  thead th:nth-child(2) {
+    width: 25%;
+  }
+
+  thead th:nth-child(3) {
+    width: 10%;
+  }
+
+  thead th:nth-child(4) {
+    width: 20%;
+  }
+
+  thead th:nth-child(5) {
+    width: 20%;
+  }
+
+  thead th:nth-child(6) {
+    width: 10%;
+  }
+
+  thead th:nth-child(7) {
+    width: 10%;
+  }
+
+  tbody td:nth-child(1) {
+    width: 5%;
+    font-size: 16px;
+  }
+
+  tbody td:nth-child(5) {
+    width: 20%;
+  }
+
+  tbody td:nth-child(6) {
+    width: 10%;
+  }
+
+  tbody td:nth-child(7) {
+    width: 10%;
+    opacity: 0.7;
+  }
+
+  tbody td:nth-child(2) {
+    font-weight: 500;
+    font-size: 14px;
+    color: #101828;
+    width: 25%;
+  }
+
+  tbody td:nth-child(3) {
+    font-weight: 400;
+    font-size: 14px;
+    color: #667085;
+    width: 10%;
+  }
+
+  tbody td:nth-child(4) {
+    font-weight: 400;
+    font-size: 14px;
+    color: #667085;
+    width: 20%;
+  }
+
+  thead tr {
+    border-bottom: 1px solid #eaecf0;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #eaecf0;
+  }
+
+  th,
+  td {
+    padding: 20px;
+    white-space: nowrap;
+  }
+
+  th {
+    padding: 10px;
+  }
+
+  td {
+    padding: 12px 10px;
+  }
+
+  input[name="select_row"] {
+    appearance: none;
+    position: relative;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #d0d5dd;
+    border-radius: 5px;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    /* Set here so that Windows' High-Contrast Mode can override */
+    color: green;
+  }
+
+  input[name="select_row"]::before {
+    content: url("../../../assets/check.svg");
+    position: absolute;
+    font-size: 1.5em;
+    right: 3px;
+    top: -0.5em;
+    visibility: hidden;
+  }
+
+  input[name="select_row"]:checked::before {
+    /* Use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+  }
+
+  input[name="select_row"]:checked {
+    background-color: #7f56d9;
+  }
+}
