@@ -64,17 +64,20 @@ const SideNav = () => {
         <div className="setting_support_links">
           <ul>
             {settings_support.map((item) => (
-              <NavLink to={item.to}>
-                <li
+              <li key={item.icon}>
+                <NavLink
+                  to={item.to}
                   key={item.icon}
-                  className={` ${
-                    active ? "bg-red-700" : ""
-                  } flex font-medium text-base text-[#344054] py-2`}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-[#F9FAFB] rounded-md flex font-medium text-base text-[#344054] py-2"
+                      : "flex font-medium text-base text-[#344054] py-2"
+                  }
                 >
                   <img src={item.icon} alt="home" className="pr-3 opacity-90" />
                   <span>{item.name}</span>
-                </li>
-              </NavLink>
+                </NavLink>
+              </li>
             ))}
           </ul>
         </div>
