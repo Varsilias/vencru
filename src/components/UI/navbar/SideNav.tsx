@@ -5,8 +5,17 @@ import avatar from "../../../assets/Avatar.png";
 import logout from "../../../assets/icons/send.svg";
 import search from "../../../assets/icons/search.svg";
 import "./style.css";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const SideNav = () => {
+  const [active, setActive] = useState(false);
+  const [path, setPath] = useState("");
+
+  const handleActive = (path: string) => {
+    setActive(true);
+    setPath(path);
+  };
   return (
     <section className="hidden md:block max-[279px]: px-4 pt-6 bg-white w-full">
       <div className="logo w-full">
@@ -30,12 +39,24 @@ const SideNav = () => {
       </div>
 
       <div className="nav_links mb-6">
-        <div className="regular_links mb-4">
-          <ul>
+        <div className="regular_links mb-4 w-full">
+          <ul className="w-full">
             {links.map((link) => (
-              <li className="flex font-medium text-base text-[#344054] py-2">
-                <img src={link.icon} alt="home" className="pr-3 opacity-90" />
-                <span className="text-left">{link.name}</span>
+              <li
+                className="flex font-medium text-base text-[#344054] py-2 w-full"
+                key={link.icon}
+              >
+                <img
+                  src={link.icon}
+                  alt="home"
+                  className="pr-3 opacity-90 w-[12%]"
+                />
+                <span className="text-left w-[78%]">{link.name}</span>
+                {link.count && (
+                  <span className="bagde rounded-xl w-[10%] font-medium py-1 px-[6px] text-sm text-[#344054] bg-[#F2F4F7]">
+                    {link.count}
+                  </span>
+                )}
               </li>
             ))}
           </ul>
@@ -43,10 +64,17 @@ const SideNav = () => {
         <div className="setting_support_links">
           <ul>
             {settings_support.map((item) => (
-              <li className="flex font-medium text-base text-[#344054] py-2">
-                <img src={item.icon} alt="home" className="pr-3 opacity-90" />
-                <span>{item.name}</span>
-              </li>
+              <NavLink to={item.to}>
+                <li
+                  key={item.icon}
+                  className={` ${
+                    active ? "bg-red-700" : ""
+                  } flex font-medium text-base text-[#344054] py-2`}
+                >
+                  <img src={item.icon} alt="home" className="pr-3 opacity-90" />
+                  <span>{item.name}</span>
+                </li>
+              </NavLink>
             ))}
           </ul>
         </div>

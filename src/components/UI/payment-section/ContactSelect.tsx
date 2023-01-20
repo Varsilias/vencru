@@ -26,6 +26,8 @@ const ContactSelect = () => {
             id="alternative"
             name="account_email"
             value="alternative"
+            readOnly={true}
+            checked={true}
           />
           <label
             htmlFor="alternative_email"

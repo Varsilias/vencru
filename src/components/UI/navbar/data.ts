@@ -17,6 +17,7 @@ export const nav_data = [
     name: "Dashboard",
     icon: dashboard,
     to: "/dashbord",
+    count: 10,
   },
   {
     name: "Projects",
